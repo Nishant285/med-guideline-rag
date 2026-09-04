@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHO Guideline Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Left rail: which documents are loaded -->
+    <aside class="rail">
+      <div class="rail-header">
+        <h1>WHO Guideline<br />Assistant</h1>
+      </div>
+
+      <div class="rail-section">
+        <p class="rail-label">Loaded guidelines</p>
+        <ul class="doc-list">
+          <li>
+            <span class="doc-dot"></span>
+            <div>
+              <p class="doc-name">Malaria treatment</p>
+              <p class="doc-meta">WHO consolidated guidelines</p>
+            </div>
+          </li>
+          <li>
+            <span class="doc-dot"></span>
+            <div>
+              <p class="doc-name">Drug-resistant tuberculosis</p>
+              <p class="doc-meta">WHO consolidated guidelines, 2019</p>
+            </div>
+          </li>
+          <li>
+            <span class="doc-dot"></span>
+            <div>
+              <p class="doc-name">Maternal &amp; newborn care</p>
+              <p class="doc-meta">WHO postnatal experience guideline</p>
+            </div>
+          </li>
+          <li>
+            <span class="doc-dot"></span>
+            <div>
+              <p class="doc-name">Immunization &amp; migrant health</p>
+              <p class="doc-meta">WHO evidence review, 2022</p>
+            </div>
+          </li>
+          <li>
+            <span class="doc-dot"></span>
+            <div>
+              <p class="doc-name">Mental health at work</p>
+              <p class="doc-meta">WHO guidelines, 2022</p>
+            </div>
+          </li>
+          <li>
+            <span class="doc-dot"></span>
+            <div>
+              <p class="doc-name">Diabetes medicines &amp; insulin</p>
+              <p class="doc-meta">WHO guidelines, 2018</p>
+            </div>
+          </li>
+          <li>
+            <span class="doc-dot"></span>
+            <div>
+              <p class="doc-name">Chronic hepatitis C</p>
+              <p class="doc-meta">WHO treatment guidelines, 2018</p>
+            </div>
+          </li>
+          <li>
+            <span class="doc-dot"></span>
+            <div>
+              <p class="doc-name">Child wasting &amp; nutrition</p>
+              <p class="doc-meta">WHO guideline, 2023</p>
+            </div>
+          </li>
+          <li>
+            <span class="doc-dot"></span>
+            <div>
+              <p class="doc-name">Chronic low back pain</p>
+              <p class="doc-meta">WHO guideline, 2023</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="rail-disclaimer">
+        <p>
+          This tool answers only from the text of the guideline documents
+          listed above. It is a software demo, not a medical device, and is
+          not a substitute for professional care.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Main reading pane -->
+    <main class="pane">
+      <div class="thread" id="thread">
+        <div class="intro">
+          <h2>Ask about the guidelines above</h2>
+          <p>
+            Answers are grounded only in the retrieved excerpts, with every
+            claim marked to a numbered source you can check against the
+            original document.
+          </p>
+        </div>
+      </div>
+
+      <form class="composer" id="composer">
+        <textarea
+          id="question-input"
+          rows="1"
+          placeholder="Ask a question about the guidelines..."
+          autocomplete="off"
+        ></textarea>
+        <button type="submit" id="send-btn">Ask</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+{
+  "_notes": "Eval set: 33 answerable questions covering all 9 documents (3-6 each, weighted toward the original 3), plus 4 out-of-corpus questions to test refusal behavior. Still a BASELINE relative to production standards (50-100+ questions), but now exercises every document in the corpus instead of just 3. Keep adding questions as you notice failure modes while using the app.",
+
+  "questions": [
+    {
+      "id": "malaria_1",
+      "question": "What is the first-line treatment for uncomplicated P. falciparum malaria?",
+      "expected_source_doc": "malaria_treatment_guidelines.pdf",
+      "expected_keywords": ["artemisinin", "combination"],
+      "answerable": true
+    },
+    {
+      "id": "malaria_2",
+      "question": "What is recommended for treating severe malaria?",
+      "expected_source_doc": "malaria_treatment_guidelines.pdf",
+      "expected_keywords": ["artesunate"],
+      "answerable": true
+    },
+    {
+      "id": "malaria_3",
+      "question": "How should malaria be treated in pregnant women during the first trimester?",
+      "expected_source_doc": "malaria_treatment_guidelines.pdf",
+      "expected_keywords": ["quinine", "clindamycin"],
+      "answerable": true
+    },
+    {
+      "id": "malaria_4",
+      "question": "What is seasonal malaria chemoprevention and which drugs does it use?",
+      "expected_source_doc": "malaria_treatment_guidelines.pdf",
+      "expected_keywords": ["sulfadoxine", "amodiaquine"],
+      "answerable": true
+    },
+    {
+      "id": "malaria_5",
+      "question": "What diagnostic testing is recommended before starting malaria treatment?",
+      "expected_source_doc": "malaria_treatment_guidelines.pdf",
+      "expected_keywords": ["diagnostic", "test"],
+      "answerable": true
+    },
+    {
+      "id": "tb_1",
+      "question": "What is the recommended treatment duration for longer MDR-TB regimens?",
+      "expected_source_doc": "tuberculosis_drug_resistant_treatment.pdf",
+      "expected_keywords": ["18", "20 months"],
+      "answerable": true
+    },
+    {
+      "id": "tb_2",
+      "question": "How long does the shorter MDR-TB regimen last?",
+      "expected_source_doc": "tuberculosis_drug_resistant_treatment.pdf",
+      "expected_keywords": ["9", "12"],
+      "answerable": true
+    },
+    {
+      "id": "tb_3",
+      "question": "When should antiretroviral therapy start in HIV-positive patients with drug-resistant TB?",
+      "expected_source_doc": "tuberculosis_drug_resistant_treatment.pdf",
+      "expected_keywords": ["8 weeks", "antiretroviral"],
+      "answerable": true
+    },
+    {
+      "id": "tb_4",
+      "question": "Is bedaquiline recommended as part of longer MDR-TB regimens?",
+      "expected_source_doc": "tuberculosis_drug_resistant_treatment.pdf",
+      "expected_keywords": ["bedaquiline"],
+      "answerable": true
+    },
+    {
+      "id": "tb_5",
+      "question": "Should MDR-TB patients be treated using ambulatory care or hospitalization?",
+      "expected_source_doc": "tuberculosis_drug_resistant_treatment.pdf",
+      "expected_keywords": ["ambulatory"],
+      "answerable": true
+    },
+    {
+      "id": "maternal_1",
+      "question": "What defines a positive postnatal experience according to WHO?",
+      "expected_source_doc": "maternal_newborn_care_guidelines.pdf",
+      "expected_keywords": ["information", "support"],
+      "answerable": true
+    },
+    {
+      "id": "maternal_2",
+      "question": "What is the recommended timeframe of the postnatal period?",
+      "expected_source_doc": "maternal_newborn_care_guidelines.pdf",
+      "expected_keywords": ["six weeks", "42 days"],
+      "answerable": true
+    },
+    {
+      "id": "maternal_3",
+      "question": "What does the guideline say about breastfeeding during postnatal care?",
+      "expected_source_doc": "maternal_newborn_care_guidelines.pdf",
+      "expected_keywords": ["breastfeeding"],
+      "answerable": true
+    },
+    {
+      "id": "maternal_4",
+      "question": "Who is the intended audience for the postnatal care guideline?",
+      "expected_source_doc": "maternal_newborn_care_guidelines.pdf",
+      "expected_keywords": ["policy-makers", "health workers"],
+      "answerable": true
+    },
+    {
+      "id": "tb_6",
+      "question": "Is surgery ever recommended for patients on MDR-TB treatment?",
+      "expected_source_doc": "tuberculosis_drug_resistant_treatment.pdf",
+      "expected_keywords": ["surgery", "resection"],
+      "answerable": true
+    },
+    {
+      "id": "mental_health_1",
+      "question": "What types of interventions do the WHO guidelines on mental health at work cover?",
+      "expected_source_doc": "mental_health_at_work.pdf",
+      "expected_keywords": ["organizational", "training"],
+      "answerable": true
+    },
+    {
+      "id": "mental_health_2",
+      "question": "What percentage of working-age adults have a mental disorder at any point in time, according to WHO?",
+      "expected_source_doc": "mental_health_at_work.pdf",
+      "expected_keywords": ["15%"],
+      "answerable": true
+    },
+    {
+      "id": "mental_health_3",
+      "question": "What mainly drives the global economic cost of depression and anxiety, according to WHO?",
+      "expected_source_doc": "mental_health_at_work.pdf",
+      "expected_keywords": ["lost productivity"],
+      "answerable": true
+    },
+    {
+      "id": "back_pain_1",
+      "question": "What settings does the WHO chronic low back pain guideline apply to?",
+      "expected_source_doc": "chronic_low_back_pain_guideline.pdf",
+      "expected_keywords": ["primary", "community"],
+      "answerable": true
+    },
+    {
+      "id": "back_pain_2",
+      "question": "Does the WHO low back pain guideline include recommendations for older people?",
+      "expected_source_doc": "chronic_low_back_pain_guideline.pdf",
+      "expected_keywords": ["older people"],
+      "answerable": true
+    },
+    {
+      "id": "back_pain_3",
+      "question": "Does the WHO chronic low back pain guideline cover surgical interventions?",
+      "expected_source_doc": "chronic_low_back_pain_guideline.pdf",
+      "expected_keywords": ["non-surgical", "does not"],
+      "answerable": true
+    },
+    {
+      "id": "diabetes_1",
+      "question": "What newer oral medicines does the WHO diabetes guideline review as second- or third-line treatments?",
+      "expected_source_doc": "diabetes_second_third_line_medicines.pdf",
+      "expected_keywords": ["DPP-4", "SGLT-2"],
+      "answerable": true
+    },
+    {
+      "id": "diabetes_2",
+      "question": "What two medicines are considered first-line treatment for hyperglycaemia in type 2 diabetes, according to WHO PEN?",
+      "expected_source_doc": "diabetes_second_third_line_medicines.pdf",
+      "expected_keywords": ["metformin", "sulfonylurea"],
+      "answerable": true
+    },
+    {
+      "id": "diabetes_3",
+      "question": "What comparison does the WHO diabetes guideline make regarding types of insulin?",
+      "expected_source_doc": "diabetes_second_third_line_medicines.pdf",
+      "expected_keywords": ["analogue", "human insulin"],
+      "answerable": true
+    },
+    {
+      "id": "hepatitis_1",
+      "question": "What is recommended for treating chronic hepatitis C infection?",
+      "expected_source_doc": "hepatitis_c_treatment_guidelines.pdf",
+      "expected_keywords": ["direct-acting antiviral"],
+      "answerable": true
+    },
+    {
+      "id": "hepatitis_2",
+      "question": "What percentage of people diagnosed with hepatitis C does WHO aim to have treated by 2030?",
+      "expected_source_doc": "hepatitis_c_treatment_guidelines.pdf",
+      "expected_keywords": ["80%"],
+      "answerable": true
+    },
+    {
+      "id": "hepatitis_3",
+      "question": "What percentage of people with hepatitis C does WHO aim to have diagnosed by 2030?",
+      "expected_source_doc": "hepatitis_c_treatment_guidelines.pdf",
+      "expected_keywords": ["90%"],
+      "answerable": true
+    },
+    {
+      "id": "immunization_1",
+      "question": "What global initiative did the Seventy-third World Health Assembly endorse in 2020 related to immunization?",
+      "expected_source_doc": "immunization_refugees_migrants.pdf",
+      "expected_keywords": ["Immunization Agenda 2030", "IA2030"],
+      "answerable": true
+    },
+    {
+      "id": "immunization_2",
+      "question": "How many children missed essential vaccines in 2020, according to WHO estimates?",
+      "expected_source_doc": "immunization_refugees_migrants.pdf",
+      "expected_keywords": ["23 million"],
+      "answerable": true
+    },
+    {
+      "id": "immunization_3",
+      "question": "What barriers do refugees and migrants face in accessing immunization services?",
+      "expected_source_doc": "immunization_refugees_migrants.pdf",
+      "expected_keywords": ["barriers"],
+      "answerable": true
+    },
+    {
+      "id": "nutrition_1",
+      "question": "How is severe wasting defined in children under 5, according to WHO?",
+      "expected_source_doc": "child_wasting_nutrition_guideline.pdf",
+      "expected_keywords": ["115"],
+      "answerable": true
+    },
+    {
+      "id": "nutrition_2",
+      "question": "What age group does the WHO guideline on wasting and nutritional oedema target?",
+      "expected_source_doc": "child_wasting_nutrition_guideline.pdf",
+      "expected_keywords": ["under 5", "infants"],
+      "answerable": true
+    },
+    {
+      "id": "nutrition_3",
+      "question": "What is nutritional oedema and where does it typically begin?",
+      "expected_source_doc": "child_wasting_nutrition_guideline.pdf",
+      "expected_keywords": ["feet"],
+      "answerable": true
+    },
+    {
+      "id": "unanswerable_1",
+      "question": "What is the capital of France?",
+      "expected_source_doc": null,
+      "expected_keywords": [],
+      "answerable": false
+    },
+    {
+      "id": "unanswerable_2",
+      "question": "What's the best over-the-counter treatment for a common cold?",
+      "expected_source_doc": null,
+      "expected_keywords": [],
+      "answerable": false
+    },
+    {
+      "id": "unanswerable_3",
+      "question": "What is the recommended treatment for a broken arm in a child?",
+      "expected_source_doc": null,
+      "expected_keywords": [],
+      "answerable": false
+    },
+    {
+      "id": "unanswerable_4",
+      "question": "How should someone treat food poisoning at home?",
+      "expected_source_doc": null,
+      "expected_keywords": [],
+      "answerable": false
+    }
+  ]
+}

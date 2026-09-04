@@ -1,0 +1,10 @@
+.env
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+# Note: data/chroma_db IS committed on purpose - it's the pre-built search
+# index, and committing it means deployment doesn't need to re-download
+# PDFs or re-run embeddings on every deploy. Not best practice for a large
+# production system (you'd use a managed vector DB), but a reasonable,
+# transparent shortcut for a portfolio deployment.

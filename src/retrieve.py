@@ -24,9 +24,11 @@ def _get_collection():
     """Lazy-load the Chroma collection so importing this module is cheap."""
     global _client, _collection
     if _collection is None:
-        embed_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-            model_name="all-MiniLM-L6-v2"
-        )
+        # DefaultEmbeddingFunction (onnxruntime-based) instead of
+        # SentenceTransformerEmbeddingFunction (PyTorch-based) - see
+        # ingest.py for why. Must match whatever embedding function built
+        # the index, or similarity scores become meaningless.
+        embed_fn = embedding_functions.DefaultEmbeddingFunction()
         _client = chromadb.PersistentClient(path=str(CHROMA_DIR))
         _collection = _client.get_collection(name=COLLECTION_NAME, embedding_function=embed_fn)
     return _collection

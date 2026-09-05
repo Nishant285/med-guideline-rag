@@ -84,10 +84,13 @@ def build_index():
         print(f"No PDFs found in {RAW_PDF_DIR}. Run download_guidelines.py first.")
         return
 
-    print("Loading embedding model (first run downloads ~80MB, then it's cached)...")
-    embed_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name="all-MiniLM-L6-v2"
-    )
+    print("Loading embedding model (first run downloads ~90MB, then it's cached)...")
+    # Using ChromaDB's built-in DefaultEmbeddingFunction (onnxruntime-based)
+    # instead of sentence-transformers/PyTorch. Same underlying MiniLM model
+    # quality-wise, but a much smaller memory footprint - this matters for
+    # deploying on free-tier hosting with limited RAM (e.g. Render's free
+    # 512MB tier, which ran out of memory with the full PyTorch stack loaded).
+    embed_fn = embedding_functions.DefaultEmbeddingFunction()
 
     client = chromadb.PersistentClient(path=str(CHROMA_DIR))
     # Reset the collection each run so re-ingesting doesn't duplicate chunks.

@@ -16,7 +16,7 @@ mental health, diabetes, hepatitis C, child nutrition, chronic low back pain).
 Built as a learning/
 portfolio project — **not a diagnostic or medical advice tool.**
 
-Live demo: _add your deployed link here once Phase 7 is done_
+Live demo: (https://who-guideline-assistant.onrender.com/)
 
 ## Why this project
 
